@@ -1,4 +1,10 @@
-<form class="space-y-6 xl:space-y-10" action="#" method="POST">
+<form
+        class="space-y-6 xl:space-y-10"
+        name="maison"
+        method="POST"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
+>
     <div>
         <label for="name" class="block text-base font-medium leading-6 text-gray-900">
             Your name
@@ -130,6 +136,8 @@
     </div>
 
     <div>
+        <div data-netlify-recaptcha="true"></div>
+
         <button type="submit"
                 class="flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuschia-600">
             Learn More
