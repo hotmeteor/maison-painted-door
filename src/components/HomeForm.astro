@@ -1,0 +1,138 @@
+<form class="space-y-6 xl:space-y-10" action="#" method="POST">
+    <div>
+        <label for="name" class="block text-base font-medium leading-6 text-gray-900">
+            Your name
+        </label>
+        <div class="mt-1">
+            <input id="name" name="name" type="text" autocomplete="name" required
+                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+    </div>
+
+    <div>
+        <label for="email_or_phone" class="block text-base font-medium leading-6 text-gray-900">
+            Your email or phone
+        </label>
+        <div class="mt-1">
+            <input id="email_or_phone" name="email_or_phone" type="text" autocomplete="name" required
+                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        </div>
+    </div>
+
+    <div>
+        <label class="block text-base font-medium leading-6 text-gray-900">
+            You are a
+        </label>
+        <fieldset class="mt-2">
+            <div class="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0">
+                <div class="flex items-center">
+                    <input id="type_buyer" name="type" type="radio" value="buyer" checked
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="type_buyer" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Buyer
+                    </label>
+                </div>
+                <div class="flex items-center">
+                    <input id="type_seller" name="type" type="radio" value="seller"
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="type_seller" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Seller
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        <label class="block text-base font-medium leading-6 text-gray-900">
+            Are you currently an AirBnb Host?
+        </label>
+        <fieldset class="mt-2">
+            <div class="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0">
+                <div class="flex items-center">
+                    <input id="host_yes" name="host" type="radio" value="yes" checked
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="host_yes" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Yes
+                    </label>
+                </div>
+                <div class="flex items-center">
+                    <input id="host_no" name="host" type="radio" value="no"
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="host_no" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        No
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        <label class="block text-base font-medium leading-6 text-gray-900">
+            How soon do you want to [buy/sell] your home?
+        </label>
+        <p class="text-sm text-gray-500 mt-1">
+            In other words, how high on the list should we put you to get your questions
+            answered?
+        </p>
+        <fieldset class="mt-4">
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <input id="urgency_1" name="urgency" type="radio" value="1" checked
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="urgency_1" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Pretty much as soon as possible
+                    </label>
+                </div>
+                <div class="flex items-center">
+                    <input id="urgency_2" name="urgency" type="radio" value="2"
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="urgency_2" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Soon, within 3 months or so
+                    </label>
+                </div>
+                <div class="flex items-center">
+                    <input id="urgency_3" name="urgency" type="radio" value="3"
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="urgency_3" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Thinking about options, maybe 6 months
+                    </label>
+                </div>
+                <div class="flex items-center">
+                    <input id="urgency_4" name="urgency" type="radio" value="4"
+                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="urgency_4" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                        Not sure yet, over 6 months
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        <label for="benefits" class="block text-base font-medium leading-6 text-gray-900">
+            Why would shared ownership be good for you?
+        </label>
+        <div class="mt-1">
+            <textarea rows="4" name="benefits" id="benefits"
+                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+        </div>
+    </div>
+
+    <div>
+        <label for="concerns" class="block text-base font-medium leading-6 text-gray-900">
+            What part of shared ownership concerns you most?
+        </label>
+        <div class="mt-1">
+            <textarea rows="4" name="concerns" id="concerns"
+                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+        </div>
+    </div>
+
+    <div>
+        <button type="submit"
+                class="flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuschia-600">
+            Learn More
+        </button>
+    </div>
+</form>
