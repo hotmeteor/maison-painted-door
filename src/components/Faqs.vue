@@ -1,5 +1,5 @@
 <template>
-  <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+  <dl class="space-y-6 divide-y divide-gray-900/10">
     <Disclosure as="div" v-for="faq in faqs" :key="faq.question" class="pt-6" v-slot="{ open }">
       <dt>
         <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">
@@ -11,7 +11,7 @@
         </DisclosureButton>
       </dt>
       <DisclosurePanel as="dd" class="mt-2 pr-12">
-        <p class="text-base leading-7 text-gray-600">{{ faq.answer }}</p>
+        <p class="text-base leading-7 text-gray-600" v-html="faq.answer"></p>
       </DisclosurePanel>
     </Disclosure>
   </dl>
@@ -32,11 +32,11 @@ const faqs = [
   },
   {
     question: 'How can I trust the buyers?',
-    answer: 'How do you trust Airbnb guests? Of course, we understand this is a bit different so we put a lot of effort into validating they\'re good people (background checks, credit checks, net worth check, past tenant complaints, etc).',
+    answer: 'The terms of ownership are clearly defined, and our team works to support you throughout your ownership journey.',
   },
   {
     question: 'How can I trust the sellers?',
-    answer: 'How do you trust Airbnb guests or Uber drivers? Of course, we understand this is a bit different so we put a lot of effort into validating they\'re good people (background checks, credit checks, Airbnb host reviews, independent appraiser, etc).',
+    answer: 'Trusting an Airbnb guest or Uber driver has become the norm, but we also understand this is a bit different. With that in mind, we put a lot of effort into validating co-owners are sound using background checks, credit checks, Airbnb host reviews, independent appraiser, etc. <br /><br />Plus, you\'ll always have the ability to approve or deny any potential co-owner.',
   }
 ]
 </script>

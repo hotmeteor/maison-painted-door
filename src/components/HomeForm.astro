@@ -7,48 +7,57 @@
 >
     <p class="hidden">
         <label>
-            For silly old bears only: <input name="silly-old-bear" />
+            For silly old bears only: <input name="silly-old-bear"/>
         </label>
     </p>
 
-    <div>
-        <label for="name" class="block text-base font-medium leading-6 text-gray-900">
-            Your name
-        </label>
-        <div class="mt-1">
-            <input id="name" name="name" type="text" autocomplete="name" required
-                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+    <div class="space-y-4 grid grid-cols-1 lg:space-y-0 lg:grid-cols-2 lg:gap-x-8">
+        <div>
+            <label for="name" class="block text-base font-medium leading-6 text-gray-900">
+                Your name
+            </label>
+            <div class="mt-1">
+                <input id="name" name="name" type="text" autocomplete="name" required
+                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
         </div>
-    </div>
 
-    <div>
-        <label for="email_or_phone" class="block text-base font-medium leading-6 text-gray-900">
-            Your email or phone
-        </label>
-        <div class="mt-1">
-            <input id="email_or_phone" name="email_or_phone" type="text" autocomplete="name" required
-                   class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+        <div>
+            <label for="email_or_phone" class="block text-base font-medium leading-6 text-gray-900">
+                Your email or phone
+            </label>
+            <div class="mt-1">
+                <input id="email_or_phone" name="email_or_phone" type="text" autocomplete="phone" required
+                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
         </div>
     </div>
 
     <div>
         <label class="block text-base font-medium leading-6 text-gray-900">
-            You are a
+            Describe yourself:
         </label>
-        <fieldset class="mt-2">
-            <div class="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0">
-                <div class="flex items-center">
-                    <input id="type_buyer" name="type" type="radio" value="buyer" checked
-                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                    <label for="type_buyer" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
-                        Buyer
+        <fieldset class="mt-3">
+            <div class="space-y-4">
+                <div class="flex items-start">
+                    <input id="type_owner" name="type" type="radio" value="buyer" checked
+                           class="h-4 w-4 mt-0.5 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="type_owner" class="ml-3 block text-sm font-medium text-gray-900">
+                        I own a second home
                     </label>
                 </div>
-                <div class="flex items-center">
-                    <input id="type_seller" name="type" type="radio" value="seller"
-                           class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
-                    <label for="type_seller" class="ml-3 block text-sm font-medium leading-6 text-gray-900">
-                        Seller
+                <div class="flex items-start">
+                    <input id="type_buyer" name="type" type="radio" value="seller"
+                           class="h-4 w-4 mt-0.5 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="type_buyer" class="ml-3 block text-sm font-medium text-gray-900">
+                        I'm looking to buy a second home
+                    </label>
+                </div>
+                <div class="flex items-start">
+                    <input id="type_none" name="type" type="radio" value="seller"
+                           class="h-4 w-4 mt-0.5 border-gray-300 text-indigo-600 focus:ring-indigo-600">
+                    <label for="type_none" class="ml-3 block text-sm font-medium text-gray-900">
+                        I'm just curious
                     </label>
                 </div>
             </div>
@@ -122,28 +131,19 @@
     </div>
 
     <div>
-        <label for="benefits" class="block text-base font-medium leading-6 text-gray-900">
-            Why would shared ownership be good for you?
+        <label for="comments" class="block text-sm font-medium leading-6 text-gray-900">
+            In your opinion, what are the benefits or concerns of shared ownership? <span
+                class="font-normal text-gray-500">(optional)</span>
         </label>
         <div class="mt-1">
-            <textarea rows="4" name="benefits" id="benefits"
-                      class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-        </div>
-    </div>
-
-    <div>
-        <label for="concerns" class="block text-base font-medium leading-6 text-gray-900">
-            What part of shared ownership concerns you most?
-        </label>
-        <div class="mt-1">
-            <textarea rows="4" name="concerns" id="concerns"
+            <textarea rows="2" name="comments" id="comments"
                       class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
         </div>
     </div>
 
     <div class="space-y-8">
         <button type="submit"
-                class="flex w-full justify-center rounded-md bg-gray-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuschia-600">
+                class="flex justify-center rounded-md bg-gray-800 px-5 py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuschia-600">
             Learn More
         </button>
     </div>
