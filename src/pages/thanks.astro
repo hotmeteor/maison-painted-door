@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import Logo from "../assets/logo.svg?component";
+---
+
+<Layout title="Maison" description="2nd home ownership, the smart way." home>
+  <main
+    class="min-h-screen bg-ocean relative flex flex-col items-center justify-center overflow-hidden isolate"
+  >
+    <div
+      class="relative z-10 bg-white mx-auto max-w-xl p-16 shadow-2xl rounded"
+    >
+      <div class="flex flex-row items-center space-x-4 mb-8 lg:mb-16">
+        <Logo class="h-16 text-fuchsia-600" />
+        <div class="space-y-0 leading-5">
+          <span
+            class="font-display block uppercase tracking-widest text-3xl font-normal"
+          >
+            Maison
+          </span>
+          <span
+            class="text-fuchsia-600 font-display block uppercase tracking-widest text-xs font-normal"
+          >
+            Smart Ownership
+          </span>
+        </div>
+      </div>
+
+      <p class="text-base sm:text-lg">
+        <span class="font-bold">Thank you for your interest.</span> At this time
+        we are focused exclusively on supporting people looking for homes for part-time
+        living.
+      </p>
+    </div>
+    <img
+      class="absolute inset-0 h-full w-full object-cover"
+      src="https://images.unsplash.com/photo-1559767949-0faa5c7e9992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      alt=""
+    />
+  </main>
+</Layout>

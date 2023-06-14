@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+import Logo from "../assets/logo.svg?component";
+import HomeForm from "../components/HomeForm.astro";
+import HomeHowItWorks from "../components/HomeHowItWorks.astro";
+import HomeFaqs from "../components/HomeFaqs.astro";
+import HomeBanner from "../components/HomeBanner.astro";
+---
+
+<Layout title="Maison" description="2nd home ownership, the smart way.">
+  <div class="min-h-screen lg:flex bg-clay">
+    <!--<HomeBanner/>-->
+
+    <div
+      class="relative p-8 z-10 max-w-lg lg:absolute lg:p-16 xl:max-w-xl 2xl:max-w-none"
+    >
+      <a href="/" class="-m-1.5 p-1.5 flex flex-row items-center space-x-4">
+        <Logo class="w-24 h-auto text-fuchsia-600" />
+        <span class="sr-only">Maison</span>
+      </a>
+      <h1
+        class="mt-10 max-w-xl text-4xl font-medium tracking-tight text-gray-900 sm:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2xl:max-w-xl"
+      >
+        2nd home ownership, the smart way.
+      </h1>
+      <h3
+        class="mt-6 max-w-xl text-xl leading-8 text-gray-700 sm:text-2xl 2xl:max-w-none lg:text-black/60"
+      >
+        Let us help you make the most of your second home.
+      </h3>
+    </div>
+
+    <div
+      class="hidden relative isolate overflow-hidden w-0 flex-1 lg:block z-0"
+    >
+      <img
+        class="absolute inset-0 h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1556580004-7eca73f3a3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1318&q=80"
+        alt=""
+      />
+
+      <div
+        class="pointer-events-none absolute left-12 top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-3xl lg:bottom-[-12rem] lg:top-auto lg:translate-y-0 lg:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-fuchsia-400 to-fuchsia-900 opacity-25"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-1 flex-col justify-center p-8 lg:flex-none lg:px-20 xl:px-24 bg-white"
+    >
+      <div class="w-full max-w-sm xl:mx-auto xl:max-w-md">
+        <HomeForm />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="mx-auto max-w-6xl grid grid-cols-1 mt-8 space-y-16 lg:space-y-0 lg:mt-32 lg:grid-cols-2 lg:gap-x-16 p-8"
+  >
+    <HomeHowItWorks />
+    <HomeFaqs />
+  </div>
+</Layout>
