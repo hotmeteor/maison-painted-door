@@ -1,16 +1,27 @@
-import { defineConfig } from "astro/config";
+import {defineConfig} from "astro/config";
 import sitemap from '@astrojs/sitemap';
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 import svgLoader from "vite-svg-loader";
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://feature-tour.netlify.app',
-  integrations: [sitemap({
-    canonicalURL: 'https://feature-tour.netlify.app'
-  }), vue(), tailwind()],
-  vite: {
-    plugins: [svgLoader()]
-  }
+    site: 'https://main--maison-painted-door.netlify.app',
+    integrations: [
+        sitemap({
+            canonicalURL: 'https://main--maison-painted-door.netlify.app'
+        }),
+        vue(),
+        tailwind(),
+        partytown({
+            // Adds dataLayer.push as a forwarding-event.
+            config: {
+                forward: ["dataLayer.push"],
+            },
+        }),
+    ],
+    vite: {
+        plugins: [svgLoader()]
+    }
 });

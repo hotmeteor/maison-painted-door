@@ -25,6 +25,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@astrojs/partytown": "^1.2.3",
     "@astrojs/sitemap": "^1.0.0",
     "@netlify/netlify-marketing-tokens": "^1.1.0",
     "astro": "^2.6.3",

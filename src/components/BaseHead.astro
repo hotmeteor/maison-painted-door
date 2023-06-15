@@ -3,6 +3,7 @@ const { title, description, home = false } = Astro.props;
 ---
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>{title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -18,4 +19,16 @@ const { title, description, home = false } = Astro.props;
 
 <meta name="msapplication-TileColor" content="#5cebdf" />
 <meta name="theme-color" content="#ffffff" />
-<title>{title}</title>
+
+<!-- head -->
+<script
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-SQM2F17XTJ"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-SQM2F17XTJ");
+</script>
