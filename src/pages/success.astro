@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/MainLayout.astro";
+---
+
+<Layout title="Maison" description="2nd home ownership, the smart way.">
+  <main
+    class="min-h-screen bg-ocean relative flex flex-col items-center justify-center overflow-hidden isolate"
+  >
+    <div
+      class="relative z-10 bg-white mx-auto max-w-xl p-16 shadow-2xl rounded"
+    >
+      <div class="space-y-6 text-base sm:text-lg">
+        <h3 class="text-2xl font-bold">Thank you!</h3>
+
+        <p class="text-base sm:text-lg">Your form submission was received.</p>
+        <p>
+          <a
+            class="font-semibold underline text-fuchsia-600 hover:text-gray-900"
+            href="/home"
+          >
+            &larr; Back to our site
+          </a>
+        </p>
+      </div>
+    </div>
+    <img
+      class="absolute inset-0 h-full w-full object-cover"
+      src="https://images.unsplash.com/photo-1559767949-0faa5c7e9992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+      alt=""
+    />
+  </main>
+</Layout>
