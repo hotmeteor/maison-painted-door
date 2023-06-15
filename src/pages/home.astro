@@ -5,6 +5,7 @@ import HomeForm from "../components/HomeForm.astro";
 import HomeHowItWorks from "../components/HomeHowItWorks.astro";
 import HomeFaqs from "../components/HomeFaqs.astro";
 import HomeBanner from "../components/HomeBanner.astro";
+import HomeAbout from "../components/HomeAbout.astro";
 ---
 
 <Layout title="Maison" description="2nd home ownership, the smart way.">
@@ -54,11 +55,13 @@ import HomeBanner from "../components/HomeBanner.astro";
     <div
       class="flex flex-1 flex-col justify-center p-8 lg:flex-none lg:px-20 xl:px-24 bg-white"
     >
-      <div class="w-full max-w-sm xl:mx-auto xl:max-w-md">
+      <div id="form" class="w-full pb-12 max-w-sm xl:mx-auto xl:max-w-md">
         <HomeForm />
       </div>
     </div>
   </div>
+
+  <HomeAbout />
 
   <div
     class="mx-auto max-w-6xl grid grid-cols-1 mt-8 space-y-16 lg:space-y-0 lg:mt-32 lg:grid-cols-2 lg:gap-x-16 p-8"
