@@ -257,6 +257,7 @@
 
   <div class="space-y-8">
     <button
+      id="submit-button"
       type="submit"
       class="flex justify-center rounded-md bg-gray-800 px-5 py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuschia-600"
     >
@@ -264,3 +265,13 @@
     </button>
   </div>
 </form>
+
+<script>
+  const button = document.getElementById("submit-button");
+
+  button.addEventListener("click", () => {
+    gtag("event", "conversion", {
+      send_to: "AW-11222330237/aYC3CJv9sqwYEP3WnOcp",
+    });
+  });
+</script>

@@ -26,9 +26,9 @@ const { title, description, home = false } = Astro.props;
   src="https://www.googletagmanager.com/gtag/js?id=AW-11222330237"></script>
 <script type="text/partytown">
   window.dataLayer = window.dataLayer || [];
-  function gtag() {
+  window.gtag = function () {
     dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-  gtag("config", "AW-11222330237");
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", "AW-11222330237");
 </script>
