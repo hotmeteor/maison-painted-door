@@ -7,9 +7,10 @@
       class="pt-6"
       v-slot="{ open }"
     >
-      <dt @click="() => reportConversion(open, faq.gtagId)">
+      <dt>
         <DisclosureButton
           class="flex w-full items-start justify-between text-left text-gray-900"
+          @click="() => reportConversion(open, faq.gtagId)"
         >
           <span class="text-base font-semibold leading-7">
             {{ faq.question }}
