@@ -61,11 +61,21 @@ import Logo from "../assets/logo.svg?component";
 <script>
   const button = document.getElementById("option-2");
 
-  button.addEventListener("click", () => {
+  function gtag_report_conversion(url) {
+    let callback = function () {
+      if (typeof url != "undefined") {
+        window.location = url;
+      }
+    };
+
     gtag("event", "conversion", {
       send_to: "AW-11222330237/xuvkCNzwsqwYEP3WnOcp",
       value: 1.0,
       currency: "USD",
+      event_callback: callback,
     });
-  });
+    return false;
+  }
+
+  button.addEventListener("click", gtag_report_conversion);
 </script>
