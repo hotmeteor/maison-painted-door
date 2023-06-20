@@ -28,7 +28,7 @@
   </dl>
 </template>
 
-<script setup>
+<script is:inline setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 
